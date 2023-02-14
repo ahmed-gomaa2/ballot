@@ -1,3 +1,254 @@
-body {
-    background: red;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    width: 80%;
+    margin: auto;
+}
+
+/*********************************** General styles ************************/
+a {
+    text-decoration: none;
+}
+
+/*********************************** Spinner styles *************************/
+
+.Spinner {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: url("../images/loading.jpg") black no-repeat center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    animation: fade-out 0.3s linear forwards 1.5s, disappear 0s linear forwards 1.5s;
+    z-index: 100;
+    transform-origin: bottom;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        z-index: -100;
+        transform: scale(.5);
+    }
+}
+
+@keyframes disappear {
+    from {
+        display: block;
+
+    }
+
+    to {
+        display: none;
+    }
+}
+
+.Spinner__circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    border-left: 2px solid transparent;
+    animation: spin linear 0.8s infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+
+/*********************************** Header section styles ******************/
+
+.Header {
+    width: 100%;
+    padding: 40px 0;
+    border-bottom: 1px solid #d5b48b;
+    animation: fadeIn 0.2s forwards linear 2s;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.Header:hover {
+    border-width: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Header__container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header__logo {
+    flex: 1;
+}
+
+.Header__logo-link {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: black;
+    font-weight: 400;
+    font-family: "JetBrains Mono ExtraLight";
+}
+
+.Header__nav {
+    flex: 20;
+}
+
+.Header__nav-items {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 30px;
+}
+
+.Header__nav-link {
+    padding: 10px 25px;
+    font-size: 18px;
+    position: relative;
+    color: black;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.Header__nav-link:hover {
+    background: #f8f8f8;
+    color: burlywood;
+}
+
+.Header__nav-link--top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: black;
+    transform: scale3d(0, 1, 1);
+    transition: 0.5s;
+    transform-origin: left;
+}
+
+.Header__nav-link:hover .Header__nav-link--top {
+    transform: scale3d(1, 1, 1);
+}
+
+.Header__nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border-width: 0 1px 0 0 ;
+    border-color: black;
+    border-style: solid;
+    display: inline-block;
+    transform: scale3d(1, 0, 1);
+    transform-origin: top;
+    transition: 0.5s;
+}
+
+.Header__nav-link:hover::before {
+    transform: scale3d(1, 1, 1);
+}
+
+.Header__nav-link--bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: black;
+    transform: scale3d(0, 1, 1);
+    transition: 0.5s;
+    transform-origin: right;
+}
+
+.Header__nav-link:hover .Header__nav-link--bottom {
+    transform: scale3d(1, 1, 1);
+}
+
+.Header__nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-width: 0 0 0 1px;
+    border-color: black;
+    transform: scale3d(1, 0, 1);
+    transition: 0.5s;
+    transform-origin: bottom;
+}
+
+.Header__nav-link:hover::after {
+    transform: scale3d(1, 1, 1);
+}
+
+.Header__registration {
+    flex: 1;
+}
+
+.Header__registration-items {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.Header__registration-item {
+    cursor: pointer;
+}
+
+.Header__registration-item i {
+    font-size: 17px;
+    transition: 0.2s;
+}
+
+.Header__registration-item i:hover {
+    transform: scale(1.2);
+}
+
+/********************************* Jumbotron styles ****************************/
+
