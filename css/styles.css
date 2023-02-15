@@ -323,7 +323,7 @@ a {
     height: 600px;
     background: radial-gradient(#dfdfdf, white);
     opacity: 0;
-    animation: fadeIn 0.2s forwards linear 2.2s;
+    animation: fadeIn 0.2s forwards linear 2.3s;
 }
 
 .Jumbotron__container {
@@ -412,7 +412,7 @@ a {
     width: 100%;
     opacity: 0;
     transform: translateY(40px);
-    animation: fadeIn 0.5s forwards 2.5s;
+    animation: fadeIn 0.5s forwards 2.3s;
     padding: 50px 0;
     border-bottom: 1px solid gray;
     margin-bottom: 50px;
@@ -733,7 +733,7 @@ a {
     width: 100%;
     transform: translateY(40px);
     opacity: 0;
-    animation: fadeIn 0.5s forwards 2.6s;
+    animation: fadeIn 0.5s forwards 2.3s;
 }
 
 .Products__container {
@@ -941,7 +941,7 @@ a {
     padding: 100px 0;
     transform: translateY(40px);
     opacity: 0;
-    animation: fadeIn 0.5s forwards 2.7s;
+    animation: fadeIn 0.5s forwards 2.3s;
 }
 
 .Reviews__container {
@@ -981,7 +981,7 @@ a {
 .Reviews__body {
     width: 60%;
     margin: auto;
-    height: 400px;
+    height: 450px;
     position: relative;
 }
 
@@ -1052,15 +1052,15 @@ a {
 }
 
 .Reviews__review-comment {
-    position: absolute;
-    right: 20px;
-    bottom: 50px;
+
 }
 
 .Reviews__review-comment {
     width: 40px;
     height: 40px;
-
+    position: absolute;
+    right: 20px;
+    bottom: 80px;
 }
 
 .Reviews__review-comment i {
@@ -1125,11 +1125,13 @@ a {
     padding: 50px 0;
     opacity: 0;
     transform: translateY(40px);
-    animation: fadeIn 0.5s forwards 2.8s;
+    animation: fadeIn 0.5s forwards 2.3s;
+    background: linear-gradient(to left, #fff8f8, white);
 }
 
 .Contact__container {
-    width: 100%;
+    width: 80%;
+    margin: auto;
 }
 
 .Contact__header {
@@ -1215,14 +1217,110 @@ a {
     color: black;
 }
 
+/************************************* Footer sections styles *******************/
 
+.Footer {
+    width: 100%;
+    padding: 50px 0;
+    transform: translateY(40px);
+    opacity: 0;
+    animation: fadeIn 0.5s forwards 2.3s;
+}
 
+.Footer__container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-flow: row;
+    padding: 40px;
+    justify-content: space-between;
+}
 
+.Footer__contacts {
+    position: relative;
+    width: 48%;
+}
 
+.Footer__contacts-header {
+    margin-bottom: 20px;
+}
 
+.Footer__contacts-header h2 {
+    font-size: 20px;
+    text-transform: capitalize;
+}
 
+.Footer__contact-links {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    list-style: none;
+}
 
+.Footer__link {
+    /*color: white;*/
+}
 
+.Footer__link i {
+    margin-right: 10px;
+}
+
+.Footer__links {
+    width: 48%;
+}
+
+.Footer__links-header {
+    margin-bottom: 20px;
+}
+
+.Footer__links-header h2 {
+    font-size: 20px;
+    text-transform: capitalize;
+
+}
+
+.Footer__links-items {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+.Footer__links-item {
+    width: 45%;
+}
+
+.Footer__links-item a {
+    color: black;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.Footer__links-item a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.Footer__icons {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-flow: row;
+    gap: 20px;
+}
+
+.Footer__icon i {
+    font-size: 25px;
+    color: black;
+    transition: 0.3s;
+}
+
+.Footer__icon i:hover {
+    color: blue;
+}
 
 
 
